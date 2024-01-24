@@ -1,0 +1,5 @@
+ public function commit($message) {
+        $commitId = $this->currentBranch . '_commit_' . (count($this->branches[$this->currentBranch]) + 1);
+        $this->branches[$this->currentBranch][] = $commitId;
+        echo "Committed: $commitId - $message\n";
+    }
